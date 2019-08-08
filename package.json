@@ -1,0 +1,25 @@
+{
+  "name": "react-challenge",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.4.3",
+    "apollo-link-ws": "^1.0.18",
+    "echarts": "^4.2.1",
+    "echarts-for-react": "^2.0.15-beta.0",
+    "graphql": "^14.4.2",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.6",
+    "react-scripts": "0.9.x",
+    "subscriptions-transport-ws": "^0.9.16"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
