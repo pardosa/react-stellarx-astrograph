@@ -68,7 +68,8 @@ const OrderBook = () => {
                             return (<span>Error!</span>);
                         }
 
-                        let sum = 0;
+                        let bidSum = 0;
+                        let asksSum = 0;
                         setDataBids(data.orderBook.bids);
                         setDataAsks(data.orderBook.asks);
                         
@@ -87,11 +88,11 @@ const OrderBook = () => {
                             </div>
                             {
                                 dataBids.map(function(bid, i){
-                                    sum = bid.amount;
+                                    bidSum += (bid.amount * bid.price);
                                     return <Order 
                                         key={i}
                                         size={bid.amount}
-                                        sum={sum}
+                                        sum={bidSum}
                                         price={bid.price}
                                         />
                                 })
@@ -101,11 +102,11 @@ const OrderBook = () => {
                             </div>
                             {
                                 dataAsks.map(function(bid, i){
-                                    sum = bid.amount;
+                                    asksSum += (bid.amount * bid.price);
                                     return <Order 
                                         key={i}
                                         size={bid.amount}
-                                        sum={sum}
+                                        sum={asksSum}
                                         price={bid.price}
                                         />
                                 })
@@ -125,7 +126,7 @@ const OrderBook = () => {
                         }
                         console.log(data);
                         if (data.offer !== null){
-                            
+
                         }
                         
                         return null;
