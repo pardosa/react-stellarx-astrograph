@@ -16,18 +16,18 @@ class App extends Component {
   render() {
     return (
       <ApolloProvider client={client} >
-      <div className="container-fluid">
-        <div className="row mt-3">
-          <div className="col-3">
+      <div className="container-fluid ">
+        <div className="row flex-xl-nowrap mt-3">
+          <div className="col-sm-3">
           <Trades client={client}/>
           </div>
-          <div className="col-6">
+          <div className="col-sm-6">
             <InfoSummary />
             <div className="row">
               <Chart />
             </div>
           </div>
-          <div className="col-3">
+          <div className="col-sm-3">
             <OrderBook />
             <MarketHistory />
           </div>
